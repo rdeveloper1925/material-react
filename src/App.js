@@ -1,23 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import HomeScreen from "./Screens/HomeScreen";
+import Navigations from "./Components/Navigations";
+import { Routes, Route } from "react-router";
+import ProductsScreen from "./Screens/ProductsScreen";
+import { useState } from "react";
 
 function App() {
+  const [isLoggedin, setIsLoggedin] = useState(false);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route element={<HomeScreen />} exact path="/home" />
+        <Route
+          element={isLoggedin ? <ProductsScreen /> : <div>Not logged in</div>}
+          exact
+          path="/products"
+        />
+        <Route path="*" element={<Navigations>Not found</Navigations>} />
+      </Routes>
+      {/*
+      <Routes>
+        <Route
+          element={
+            <Navigations>
+              <HomeScreen />
+            </Navigations>
+          }
+          exact
+          path="/"
+        />
+        <Route
+          path="/products"
+          exact
+          element={
+            isLoggedin ? (
+              <Navigations>Not Allowed</Navigations>
+            ) : (
+              <Navigations>
+                <ProductsScreen />
+              </Navigations>
+            )
+          }
+        />
+        <Route path="*" element={<Navigations>Not found</Navigations>} />
+      </Routes>
+        */}
     </div>
   );
 }
