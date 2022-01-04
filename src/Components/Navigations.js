@@ -15,7 +15,7 @@ import {
   ListItemText,
   IconButton,
 } from "@mui/material";
-import { AccountCircle } from "@mui/icons-material";
+import { AccountCircle, AddBox } from "@mui/icons-material";
 import MuiAppBar from "@mui/material/AppBar";
 import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
@@ -106,6 +106,7 @@ export default function Navigations(props) {
 const DrawerLinks = [
   { text: "Home", icon: <HomeIcon />, to: "/home" },
   { text: "Products", icon: <Inventory2 />, to: "/products" },
+  { text: "Create Resource", icon: <AddBox />, to: "/create-resource" },
 ];
 
 //Auth menu

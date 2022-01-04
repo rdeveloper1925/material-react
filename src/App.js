@@ -3,17 +3,23 @@ import Navigations from "./Components/Navigations";
 import { Routes, Route } from "react-router";
 import ProductsScreen from "./Screens/ProductsScreen";
 import { useState } from "react";
+import CreateResourceScreen from "./Screens/CreateResourceScreen";
 
 function App() {
-  const [isLoggedin, setIsLoggedin] = useState(false);
+  //const [isLoggedin, setIsLoggedin] = useState(false);
   return (
     <div className="App">
       <Routes>
         <Route element={<HomeScreen />} exact path="/home" />
+        <Route element={<ProductsScreen />} exact path="/products" />
         <Route
-          element={isLoggedin ? <ProductsScreen /> : <div>Not logged in</div>}
+          element={
+            <Navigations>
+              <CreateResourceScreen />
+            </Navigations>
+          }
           exact
-          path="/products"
+          path="/create-resource"
         />
         <Route path="*" element={<Navigations>Not found</Navigations>} />
       </Routes>
