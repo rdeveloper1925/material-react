@@ -23,7 +23,7 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import HomeIcon from "@mui/icons-material/Home";
 import { Link } from "react-router-dom";
 import { Inventory2 } from "@mui/icons-material";
-
+import { StackedBarChartOutlined } from "@mui/icons-material";
 const drawerWidth = 240;
 
 export default function Navigations(props) {
@@ -107,6 +107,7 @@ const DrawerLinks = [
   { text: "Home", icon: <HomeIcon />, to: "/home" },
   { text: "Products", icon: <Inventory2 />, to: "/products" },
   { text: "Create Resource", icon: <AddBox />, to: "/create-resource" },
+  { text: "Server Status", icon: <StackedBarChartOutlined />, to: "/server" },
 ];
 
 //Auth menu
