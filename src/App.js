@@ -5,12 +5,14 @@ import ProductsScreen from "./Screens/ProductsScreen";
 import { useState } from "react";
 import CreateResourceScreen from "./Screens/CreateResourceScreen";
 import ServerScreen from "./Screens/ServerScreen";
+import ProductsOverview from "./Screens/ProductsOverview";
 
 function App() {
   //const [isLoggedin, setIsLoggedin] = useState(false);
   return (
     <div className="App">
       <Routes>
+        <Route element={<ProductsOverview />} exact path="/" />
         <Route element={<HomeScreen />} exact path="/home" />
         <Route element={<ProductsScreen />} exact path="/products" />
         <Route element={<ServerScreen />} exact path="/server" />
