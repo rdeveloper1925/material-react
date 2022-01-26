@@ -15,7 +15,7 @@ import {
   ListItemText,
   IconButton,
 } from "@mui/material";
-import { AccountCircle, AddBox, StackedBarChart } from "@mui/icons-material";
+import { AccountCircle, AddBox, Groups } from "@mui/icons-material";
 import MuiAppBar from "@mui/material/AppBar";
 import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
@@ -24,6 +24,8 @@ import HomeIcon from "@mui/icons-material/Home";
 import { Link } from "react-router-dom";
 import { Inventory2 } from "@mui/icons-material";
 import { StackedBarChartOutlined } from "@mui/icons-material";
+import DashboardIcon from "@mui/icons-material/Dashboard";
+import ReceiptIcon from "@mui/icons-material/Receipt";
 const drawerWidth = 240;
 
 export default function Navigations(props) {
@@ -53,7 +55,7 @@ export default function Navigations(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap sx={{ flexGrow: 1 }} component="div">
-            Slick Fits Administrator
+            React Invoicer
           </Typography>
           <AuthMenu />
         </Toolbar>
@@ -104,11 +106,10 @@ export default function Navigations(props) {
 
 //Drawer links
 const DrawerLinks = [
-  { text: "Landing", icon: <StackedBarChart />, to: "/" },
-  { text: "Home", icon: <HomeIcon />, to: "/home" },
+  { text: "Dashboard", icon: <DashboardIcon />, to: "/" },
+  { text: "Customers", icon: <Groups />, to: "/customers" },
   { text: "Products", icon: <Inventory2 />, to: "/products" },
-  { text: "Create Resource", icon: <AddBox />, to: "/create-resource" },
-  { text: "Server Status", icon: <StackedBarChartOutlined />, to: "/server" },
+  { text: "Invoicing", icon: <ReceiptIcon />, to: "/invoice" },
 ];
 
 //Auth menu

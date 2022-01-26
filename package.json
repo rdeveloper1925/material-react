@@ -28,7 +28,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "dev": "concurrently \"npm start\" \" npm run start-server --prefix server\""
   },
   "proxy": "http://localhost:3001",
   "eslintConfig": {
@@ -53,5 +54,9 @@
   "main": "index.js",
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "concurrent": "^0.3.2",
+    "concurrently": "^7.0.0"
+  }
 }
