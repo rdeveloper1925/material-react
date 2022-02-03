@@ -1,18 +1,13 @@
 import { Routes, Route } from "react-router";
-import HomeScreen from "./Screens/HomeScreen";
-
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import TopBar from "./Components/TopBar";
 function App() {
   //const [isLoggedin, setIsLoggedin] = useState(false);
   return (
     <div className="App">
       <Routes>
-        <Route exact path="/" element={<HomeScreen />} />
-        {/* {<Route element={<DashboardScreen />} exact path="/" />
-        <Route element={<CustomersScreen />} exact path="/customers" />
-        <Route element={<ProductsScreen />} exact path="/products" />
-        <Route element={<InvoiceScreen />} exact path="/invoice" />} */}
-
-        <Route path="*" element={<div>Not found</div>} />
+        <Route exact path="/" element={<TopBar />} />
       </Routes>
     </div>
   );

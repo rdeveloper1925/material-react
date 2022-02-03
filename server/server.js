@@ -5,6 +5,7 @@ const port = 3001;
 const app = express();
 
 app.disable("X-Powered-By");
+app.use(express.json());
 //global middleware
 app.use((request, response, next) => {
   //console.log("global middleare");
